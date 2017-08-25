@@ -1,0 +1,33 @@
+<form ng-submit="vm.submit()">
+
+    <div>
+    <md-input-container>
+        <label>Name</label>
+        <input type="text" ng-model="vm.name">
+    </md-input-container>
+    </div>
+    <div>
+    <md-input-container>
+        <label>Topic</label>
+        <input type="text" ng-model="vm.topic">
+    </md-input-container>
+    </div>
+
+    <md-button type="submit" class="md-primary md-raised">Create post</md-button>
+
+</form>
+<hr/>
+<div ng-if="!vm.posts.length">
+    No data
+</div>
+<table ng-if="vm.posts.length" class="post-block" ng-repeat="post in vm.posts">
+    <tr>
+        <td class="post-info">
+            <h4>{{ post.name }}</h4>
+            <p>{{ post.topic }}</p>
+        </td>
+        <td class="post-btn">
+            <button ng-click="vm.deletePost(post.id)">Delete</button>
+        </td>
+    </tr>
+</table>

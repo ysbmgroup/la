@@ -27,8 +27,16 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
 				main: {}
 			}
 		})
-		.state('app.landing', {
+        .state('app.posts', {
             url: '/',
+            views: {
+                'main@': {
+                    templateUrl: getView('posts')
+                }
+            }
+        })
+        .state('app.landing', {
+            url: '/landing',
             views: {
                 'main@': {
                     templateUrl: getView('landing')
@@ -67,12 +75,4 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
                 }
             }
         })
-        .state('app.create_post', {
-        url: '/create-post',
-        views: {
-            'main@': {
-                templateUrl: getView('create_post')
-            }
-        }
-    });
 }

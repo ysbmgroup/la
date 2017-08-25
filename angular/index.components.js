@@ -1,4 +1,4 @@
-import {CreatePostFormComponent} from './app/components/create_post_form/create_post_form.component';
+import {PostsComponent} from './app/components/posts/posts.component';
 import {AppHeaderComponent} from './app/components/app-header/app-header.component';
 import {AppRootComponent} from './app/components/app-root/app-root.component';
 import {AppShellComponent} from './app/components/app-shell/app-shell.component';
@@ -8,8 +8,8 @@ import {LoginFormComponent} from './app/components/login-form/login-form.compone
 import {RegisterFormComponent} from './app/components/register-form/register-form.component';
 
 angular.module('app.components')
-	.component('createPostForm', CreatePostFormComponent)
-	.component('appHeader', AppHeaderComponent)
+	.component('posts', PostsComponent)
+    .component('appHeader', AppHeaderComponent)
 	.component('appRoot', AppRootComponent)
 	.component('appShell', AppShellComponent)
 	.component('resetPassword', ResetPasswordComponent)

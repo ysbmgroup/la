@@ -20,7 +20,9 @@ Route::post('auth/password/email', 'Auth\PasswordResetController@sendResetLinkEm
 Route::get('auth/password/verify', 'Auth\PasswordResetController@verify');
 Route::post('auth/password/reset', 'Auth\PasswordResetController@reset');
 
-Route::post('posts', 'CreatePostController@create');
+Route::get('posts', 'PostsController@get');
+Route::post('post', 'PostsController@create');
+Route::get('post/{id}/delete', 'PostsController@delete');
 
 //protected API routes with JWT (must be logged in)
 Route::get('/user', function (Request $request) {
