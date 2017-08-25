@@ -14,6 +14,8 @@ class CreatePostFormController{
 
         this.API.all('posts').post(data).then(() => {
             this.ToastService.show('Post added successfully');
+            this.name = '';
+            this.topic = '';
         });
     }
 }
