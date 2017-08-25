@@ -11,8 +11,8 @@ class CreatePostController extends Controller
     public function create(Request $request)
     {
         $this->validate($request, [
-            'name'  => 'required',
-            'topic' => 'required',
+            'name'  => 'required|string|min:10',
+            'topic' => 'required|string',
         ]);
 
         $post = new Post;
