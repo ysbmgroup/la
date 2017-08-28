@@ -1,10 +1,15 @@
 .post-block{
   width: 100%;
-  border: 1px solid #333;
+  border: 1px solid #04A5C9;
+  color: #04A5C9;
   .post-info{
     text-align: left;
   }
   .post-btn{
     text-align: right;
+    .delete-btn{
+      padding: 5px;
+      cursor: pointer;
+    }
   }
 }

@@ -21,13 +21,19 @@
     No data
 </div>
 <table ng-if="vm.posts.length" class="post-block" ng-repeat="post in vm.posts">
-    <tr>
-        <td class="post-info">
-            <h4>{{ post.name }}</h4>
-            <p>{{ post.topic }}</p>
-        </td>
-        <td class="post-btn">
-            <button ng-click="vm.deletePost(post.id)">Delete</button>
-        </td>
-    </tr>
+    <body>
+        <tr>
+            <td class="post-info"></td>
+            <td class="post-btn">
+                <span class="delete-btn" ng-click="vm.deletePost(post.id)">X</span>
+            </td>
+        </tr>
+        <tr>
+            <td class="post-info">
+                <b>{{ post.name }}</b>
+                <p>{{ post.topic }}</p>
+            </td>
+            <td class="post-btn"></td>
+        </tr>
+    </body>
 </table>
